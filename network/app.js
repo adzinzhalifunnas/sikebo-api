@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const requestPromise = require('request-promise');
 const pkg = require('body-parser');
 
@@ -13,6 +14,7 @@ const port = 3000;
 const blockchain = new Blockchain();
 const nodeAddress = uuid().split('-').join('');
 
+app.use(cors());
 app.use(_json());
 app.use(urlencoded({ extended: false }));
 
@@ -221,6 +223,10 @@ app.get('/address/:address', function(req,res) {
     res.json({
         addressData: addressData 
     });
+});
+
+app.get('/block-explorer',function(req, res) {
+    res.sendFile('index.html', { root: './block-explorer' });
 });
 
 app.listen(port, () => {

@@ -14,10 +14,11 @@
   "author": "Adzin Zhalifunnas, Dylan Goliat, Irfan Hera Nurrohman, Naufal Ziyaadaturrahman, Raymond Willen Kristopo",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2",
+    "js-sha3": "^0.8.0",
     "nodemon": "^3.1.9",
-    "request-promise": "^4.2.6",
-    "js-sha3": "^0.8.0"
+    "request-promise": "^4.2.6"
   },
   "devDependencies": {
     "@types/uuid": "^10.0.0"
